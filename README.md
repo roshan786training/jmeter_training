@@ -31,3 +31,12 @@ a) View Result Tree Listener -
 
 6) Config Elements - these are used to configure samplers
 a) HTTP Header Manager - this is used to send additional headers to server. e.g. 'content-type'
+b) HTTP Request Defaults - it isused to configure common things for multiple samples, such as base url, protocol, port numbers, etc. It is useful when we have multiple requests to the same server
+c) User Defined Variables - Used to define user defined variables and can be used  using syntaxt : ${variableName}. variables can be defined at Test Plan level or Thread Group level.
+
+
+Sequence of execution of differnt elements
+1) Config Elements
+-- 2) Samplers
+---- 3) Listeners
+
