@@ -28,3 +28,6 @@ a) HTTP - this is to make HTTP request
 
 5) Listeners - facilitates to view sampler's results in the form of table, graphs, simple text, etc. Listeners offer a means to collect, save, view the results of a test plan. There are different types of listeners
 a) View Result Tree Listener - 
+
+6) Config Elements - these are used to configure samplers
+a) HTTP Header Manager - this is used to send additional headers to server. e.g. 'content-type'
