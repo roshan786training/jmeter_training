@@ -41,12 +41,19 @@ a) Response Assertion - it is used to compare string patterns withing response. 
 b) Duration Assertion - it is used to assert the response time from the server
 c) Size Assertion - it is used to assert the response from server contains expected(>, <, =, !=) number of bytes
 d) JSON Assertion - it can be used to check value of key from the json sent by server as response body
+e) HTML Assertion - it is used to assert whether the page returned is following proper html format or not
+
+8) Timers - Timers are used to add delay for a request. There ae following types of timers
+a) Constant Timer - This is to add constant delay for a sampler(request)
+b) Uniform Random Time - this is to add delay within range ( e.g. 100ms to 200ms) . Accepts 2 properties
 
 
 Sequence of execution of differnt elements
 1) Config Elements
--- 2) Samplers
----- 3) Listeners
+-- 2) Timer
+---- 3) Samplers
+------ 4) Assertions
+-------- 5) Listeners
 
 
 
