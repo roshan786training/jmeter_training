@@ -1,5 +1,3 @@
-# jmeter_training
-
 Performance Testings
 
 Its a non functional testing
