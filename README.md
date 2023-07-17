@@ -33,8 +33,14 @@ a) View Result Tree Listener -
 a) HTTP Header Manager - this is used to send additional headers to server. e.g. 'content-type'
 b) HTTP Request Defaults - it isused to configure common things for multiple samples, such as base url, protocol, port numbers, etc. It is useful when we have multiple requests to the same server
 c) User Defined Variables - Used to define user defined variables and can be used  using syntaxt : ${variableName}. variables can be defined at Test Plan level or Thread Group level.
-d) CSV Data Set Config- it i sused to fetch data line by line and store it in the variables separated by commas.
-e) 
+d) CSV Data Set Config- it is used to fetch data line by line and store it in the variables separated by commas.
+e) HTTP Cookie Manager - it is used to simulate browser activity by storing the cookie and sending the cookie back to server
+
+7) Assertions - these are used to apply validations on the response sent by server. there are following types of assertions:
+a) Response Assertion - it is used to compare string patterns withing response. it can also be used to compare response code, response message
+b) Duration Assertion - it is used to assert the response time from the server
+c) Size Assertion - it is used to assert the response from server contains expected(>, <, =, !=) number of bytes
+d) JSON Assertion - it can be used to check value of key from the json sent by server as response body
 
 
 Sequence of execution of differnt elements
