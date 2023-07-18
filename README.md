@@ -35,6 +35,7 @@ b) HTTP Request Defaults - it isused to configure common things for multiple sam
 c) User Defined Variables - Used to define user defined variables and can be used  using syntaxt : ${variableName}. variables can be defined at Test Plan level or Thread Group level.
 d) CSV Data Set Config- it is used to fetch data line by line and store it in the variables separated by commas.
 e) HTTP Cookie Manager - it is used to simulate browser activity by storing the cookie and sending the cookie back to server
+f) HTTP Authorization Manager - it is used to handle browser authentication process ( basic authentication )
 
 7) Assertions - these are used to apply validations on the response sent by server. there are following types of assertions:
 a) Response Assertion - it is used to compare string patterns withing response. it can also be used to compare response code, response message
@@ -47,13 +48,37 @@ e) HTML Assertion - it is used to assert whether the page returned is following 
 a) Constant Timer - This is to add constant delay for a sampler(request)
 b) Uniform Random Time - this is to add delay within range ( e.g. 100ms to 200ms) . Accepts 2 properties
 
+9) PreProcessors - these are elements executed before samplers ( e.g. HTML Link Parser, BeanShellPreProcessor)
+
+10) PostProcessor - These are elements executed after samplers ( e.g. Regular Expression Extractor )
+
+
+
 
 Sequence of execution of differnt elements
 1) Config Elements
--- 2) Timer
----- 3) Samplers
------- 4) Assertions
--------- 5) Listeners
+-- 2) PreProcessor
+---- 3) Timer
+------ 4) Samplers
+--------5) PostProcessor
+-------- 6) Assertions
+---------- 7) Listeners
+
+
+
+UseCase
+
+) With 5 users all users are hitting server at the same time
+2) Users are visiting 3 pages
+3) Before going to each page we need to have some waiting time
+4) URL can change in future
+5) Generate report
+
+
+
+
+
+
 
 
 
